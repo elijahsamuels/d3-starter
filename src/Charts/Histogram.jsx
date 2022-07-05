@@ -120,7 +120,7 @@ function Histogram(props) {
   return (
     <div>
       <h2>Histogram</h2>
-      <h4>using D3.js with breweries as data</h4>
+      <h4>using D3.js with <a href="https://api.openbrewerydb.org/breweries">breweries as data</a></h4>
       <div className="histogram chart" id="histogram"></div>
     </div>
   );

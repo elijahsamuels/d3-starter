@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import LineChart from "./Charts/LineChart";
+import TimeSeries from "./Charts/TimeSeries";
+import Histogram from "./Charts/Histogram";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className="row">
+        <LineChart height={400} width={400}/>
+        <TimeSeries height={400} width={400} />
+        <Histogram height={400} width={400} />
+      </div>
     </div>
   );
 }

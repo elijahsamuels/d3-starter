@@ -9,11 +9,11 @@ function App() {
     <div className="App">
 
       <div className="row">
+        <Weather height={400} width={400} />
 				
         <LineChart height={400} width={400}/>
         <TimeSeries height={400} width={400} />
         <Histogram height={400} width={400} />
-        <Weather height={400} width={400} />
 
       </div>
     </div>

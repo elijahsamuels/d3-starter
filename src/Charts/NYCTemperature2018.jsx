@@ -23,7 +23,11 @@ function NYCTemperature2018() {
   };
 
   const drawChart = () => {
-    console.log("Left this console.log in so you can see the data.","\nData for NYC TemperatureMax 2018:", data);
+    console.log(
+      "Left this console.log in so you can see the data.",
+      "\nData for NYC TemperatureMax 2018:",
+      data
+    );
 
     let dimensions = {
       width: window.innerWidth * 0.9,
@@ -85,11 +89,17 @@ function NYCTemperature2018() {
       .x((d) => xScale(xAccessor(d)))
       .y((d) => yScale(yAccessor(d)));
 
+    // const lineColor = d3
+    //   .scaleLinear()
+    //   .domain([0, d3.max(data, (d) => d.temperatureMax)])
+    //   .range(["blue", "red"]);
+
     const line = bounds
       .append("path")
       .attr("d", lineGenerator(data))
       .attr("fill", "none")
-      .attr("stroke", "grey")
+      .attr("stroke", "blue") //---- CHANGE THIS TO THE TEMP ----//
+      // .attr("stroke", lineColor(45))
       .attr("stroke-width", 2);
 
     //---- Draw peripherals (sides and labels) ----//
@@ -111,7 +121,7 @@ function NYCTemperature2018() {
     <div>
       <h2>NYC Max Temperature 2018</h2>
       <h4>using D3.js static JSON data</h4>
-      <div className="wrapper" id="wrapper"></div>
+      <div className="wrapper chart" id="wrapper"></div>
     </div>
   );
 }

@@ -89,12 +89,11 @@ function TimeSeries(props) {
 			// .attr("class", "line")
 			.attr("d", line);
 			
-
   };
 
   return (
     <div>
-      <h2>LineChart</h2>
+      <h2>Time Series Line Chart</h2>
       <h4>using D3.js with valuation of Bitcoin as data</h4>
       <div className="time_series chart" id="time_series"></div>
     </div>

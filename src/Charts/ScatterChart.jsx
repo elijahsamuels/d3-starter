@@ -48,7 +48,7 @@ function ScatterChart() {
     // ---- 3. Draw SVG (or canvas) ----//
 
     const wrapper = d3
-      .select("#wrapper") // selecting the element by it's ID
+      .select("#scatter-chart") // selecting the element by it's ID
       .append("svg")
       .attr("width", dimensions.width)
       .attr("height", dimensions.height);
@@ -148,7 +148,7 @@ function ScatterChart() {
     <div>
       <h2>Scatter Chart</h2>
       <h4>using D3.js static JSON data</h4>
-      <div className="wrapper chart" id="wrapper"></div>
+      <div className="scatter chart" id="scatter-chart"></div>
     </div>
   );
 }

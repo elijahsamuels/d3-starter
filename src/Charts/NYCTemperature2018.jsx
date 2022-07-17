@@ -46,7 +46,7 @@ function NYCTemperature2018() {
       dimensions.height - dimensions.margins.top - dimensions.margins.bottom;
 
     const wrapper = d3
-      .select(".wrapper")
+      .select("#temp-line-chart")
       .append("svg")
       .attr("width", dimensions.width)
       .attr("height", dimensions.height);
@@ -121,7 +121,7 @@ function NYCTemperature2018() {
     <div>
       <h2>NYC Max Temperature 2018</h2>
       <h4>using D3.js static JSON data</h4>
-      <div className="wrapper chart" id="wrapper"></div>
+      <div className="wrapper chart" id="temp-line-chart"></div>
     </div>
   );
 }
